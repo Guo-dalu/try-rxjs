@@ -1,0 +1,130 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["plugin:import/errors", "plugin:import/warnings", "airbnb"],
+  "plugins": ["babel", "import", "react-hooks"],
+  "settings": {
+    "import/ignore": ["node_modules", "\\.json$"],
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      "extensions": [".js", ".jsx", ".json"]
+    }
+  },
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "semi": [2, "never"],
+    "comma-dangle": [2, "always-multiline"],
+    "global-require": 0,
+    "import/no-cycle": 0,
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "no-mixed-operators": [
+      2,
+      {
+        "allowSamePrecedence": true
+      }
+    ],
+    "no-unused-vars": "warn",
+    "jsx-a11y/no-static-element-interactions": 0,
+    "no-alert": 0,
+    "no-console": 0,
+    "no-undef": 1,
+    "no-confusing-arrow": 0,
+    "no-nested-ternary": 0,
+    "id-length": 0,
+    "consistent-return": 0,
+    "react/no-did-update-set-state": 1,
+    "react/jsx-no-bind": 0,
+    "react/no-string-refs": 0,
+    "class-methods-use-this": 0,
+    "react/prop-types": [
+      2,
+      {
+        "ignore": ["store"],
+        "customValidators": []
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "max-len": [
+      2,
+      120,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": false
+      }
+    ],
+    "new-cap": [
+      2,
+      {
+        "capIsNewExceptions": ["express.Router", "Radium"]
+      }
+    ],
+    "no-param-reassign": [
+      2,
+      {
+        "props": false
+      }
+    ],
+    "no-underscore-dangle": [
+      0,
+      {
+        "allow": ["__CLIENT__", "__SERVER__"]
+      }
+    ],
+    "no-plusplus": "off",
+    "generator-star-spacing": 0,
+    "import/no-named-as-default-member": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["Logger", "Config"]
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 1,
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/no-array-index-key": 0
+  },
+  "globals": {
+    "__DEVELOPMENT__": true,
+    "__PRODUCTION__": true,
+    "Reactotron": true,
+    "window": true,
+    "navigator": true,
+    "document": true,
+    "describe": true,
+    "location": true,
+    "localStorage": true,
+    "WebSocket": true,
+    "test": true,
+    "fetch": true,
+    "expect": true,
+    "FormData": true,
+    "Blob": true,
+    "FileReader": true,
+    "File": true,
+    "atob": true
+  }
+}
